@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SSL sertifikater</title>
+  <style>
+    th, td {
+      padding: 5px 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SSL sertifikater</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nettsted</th>
+        <th>Sertifikat utløper</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for site in sites %}
+        <tr>
+          <td>
+            <a href="https://{{ site.hostname }}">{{ site.hostname }}</a>
+          </td>
+          <td>
+            {{ site.validity|date('F jS, Y') }}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+</html>

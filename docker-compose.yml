@@ -1,0 +1,9 @@
+dev:
+  image: node:argon-slim
+  working_dir: /usr/src/app
+  ports:
+  - "8000:8000"
+  volumes:
+    - ".:/usr/src/app"
+  env_file: .env
+  command: "npm run main"

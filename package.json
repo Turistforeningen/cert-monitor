@@ -1,0 +1,23 @@
+{
+  "name": "certificate-monitor",
+  "version": "0.0.1",
+  "description": "Certificate monitor with HTTP server and Slack notifications",
+  "main": "src/main.js",
+  "scripts": {
+    "main": "node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Turistforeningen/certificate-monitor.git"
+  },
+  "author": "Ali Kaafarani <ali.kaafarani@dnt.no>",
+  "license": "MIT",
+  "homepage": "https://github.com/Turistforeningen/certificate-monitor",
+  "dependencies": {
+    "async": "~1",
+    "cron": "~1",
+    "moment": "~2",
+    "request": "~2",
+    "swig": "~1"
+  }
+}
