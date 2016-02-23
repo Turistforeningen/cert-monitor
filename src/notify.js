@@ -16,7 +16,7 @@ module.exports._slackNotification = ((hostname, days) => {
   const payload = JSON.stringify({
     username: 'SSL certificate expiration notification manager authority',
     icon_emoji: ':lock:',
-    text: `Warning: The SSL certificate for https://${hostname} expires in ${days} days. <https://${process.env.WEBSERVER_HOSTNAME}|See overview>.`,
+    text: `Warning: The SSL certificate for https://${hostname} expires in ${days} days. <${process.env.VIRTUAL_HOST.split(',')[0]}|See overview>.`,
   });
 
   request.post({
